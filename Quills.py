@@ -5,7 +5,7 @@ from os import path
 import csv
 import random
 
-def _writeTaskSolveForStudent(taskOutPath : str, solveOutPath : str, title : str, sortedTasks : SortedTaskCollection, **perTagCount):
+def _writeTaskSolveForStudent(taskOutPath : str, solveOutPath : str, title : str, sortedTasks : SortedTaskCollection, **perTagCount) -> None:
     taskLines : List[str] = [f"# {title}\n"]
     solveLines : List[str] = [f"# SOLVE : {title}\n"]
     questionCounter = 1
@@ -44,7 +44,7 @@ def generateSortedTaskCollection(unsortedTasksPattern_IN : str, sortedTaskPath_O
     sortedTasks.generateFromPathPattern(inPath)
     sortedTasks.serializeToJson(outPath)
 
-def generateTasksSolvesFromSortedTaskCollection(taskname : str, sortedTaskPath_IN : str, studentListPath_IN : str, taskPath_OUT : str, solvePath_OUT : str, **perTagCount):
+def generateTasksSolvesFromSortedTaskCollection(taskname : str, sortedTaskPath_IN : str, studentListPath_IN : str, taskPath_OUT : str, solvePath_OUT : str, **perTagCount) -> None:
     absInTaskPath = path.abspath(sortedTaskPath_IN)
     absInStdListPath = path.abspath(studentListPath_IN)
     absOutTaskPath = path.abspath(taskPath_OUT)
