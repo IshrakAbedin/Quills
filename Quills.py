@@ -1,5 +1,6 @@
 from typing import List
 from QuillsModules.QuillsSorter import SortedTaskCollection
+from QuillsModules.QuillsRandom import nonRepeatingRandomInRange
 from os import path
 import csv
 import random
@@ -11,11 +12,14 @@ def _writeTaskSolveForStudent(taskOutPath : str, solveOutPath : str, title : str
 
     for tag in perTagCount:
         taskCount = perTagCount[tag]
-        for _ in range(taskCount):
+        qapList = sortedTasks.getQuestionAnswerPairListByTag(tag)
+        if(taskCount > len(qapList)):
+            print(f"[ERROR!] (tag: {tag}) Task count ({taskCount}) is more than collection ({len(qapList)}).")
+            exit(1)
+        indiceCollection = nonRepeatingRandomInRange(len(qapList), taskCount)
+        for chosenIndex in indiceCollection:
             taskLines.append(f"## Question {questionCounter} (tag: {tag})\n---\n")
             solveLines.append(f"## Question {questionCounter} (tag: {tag})\n---\n")
-            qapList = sortedTasks.getQuestionAnswerPairListByTag(tag)
-            chosenIndex = random.randrange(0, len(qapList))
             qap = qapList[chosenIndex]
             taskLines.append(qap.Question)
             solveLines.append(qap.Question)

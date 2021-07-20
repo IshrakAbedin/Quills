@@ -3,7 +3,7 @@
 ## Question 1 (tag: easy)
 ---
 
-This is a *Sample Question*, numbered **2**.\
+This is a *Sample Question*, numbered **1**.\
 Take a look at the following code,
 
 ```C
@@ -13,7 +13,7 @@ int main(void)
 {
     for(int i = 0; i < 10; i++)
     {
-        printf("Hello World 2\n");
+        printf("Hello World 1\n");
     }
     return 0;
 }
@@ -21,7 +21,7 @@ int main(void)
 ## Answer 1 (tag: easy)
 ---
 
-This is answer to question 2.
+This is answer to question 1.
 
 
 ## Question 2 (tag: medium)
@@ -48,10 +48,10 @@ int main(void)
 This is answer to question 3.
 
 
-## Question 3 (tag: hard)
+## Question 3 (tag: medium)
 ---
 
-This is a *Sample Question*, numbered **5**.\
+This is a *Sample Question*, numbered **4**.\
 Take a look at the following code,
 
 ```C
@@ -61,13 +61,37 @@ int main(void)
 {
     for(int i = 0; i < 10; i++)
     {
-        printf("Hello World 5\n");
+        printf("Hello World 4\n");
     }
     return 0;
 }
 ```
-## Answer 3 (tag: hard)
+## Answer 3 (tag: medium)
 ---
 
-This is answer to question 5.
+This is answer to question 4.
+
+
+## Question 4 (tag: hard)
+---
+
+This is a *Sample Question*, numbered **6**.\
+Take a look at the following code,
+
+```C
+#include <stdio.h>
+
+int main(void)
+{
+    for(int i = 0; i < 10; i++)
+    {
+        printf("Hello World 6\n");
+    }
+    return 0;
+}
+```
+## Answer 4 (tag: hard)
+---
+
+This is answer to question 6.
 
