@@ -47,7 +47,7 @@ A question must have three header tags:
 
 1. `# Question` : Anything after it is treated as the question part.
 2. `# Answer` : Anything after it is treated as the answer part.
-3. `# Tag` : Anything after it is treated as a tag.
+3. `# Tag` : Anything after it is treated as a tag. Supports multiple commad separated tags for a single question.
 
 Sample questions can be found under the `UCOLLECTION` folder. One is given next.
 
